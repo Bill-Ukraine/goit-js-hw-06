@@ -6,7 +6,10 @@ inputEl.addEventListener('blur', blurBorder);
     if (inputValue === 6) {
         inputEl.classList.add('valid');
         inputEl.classList.remove('invalid');
-    } else {
+    } if (inputValue === 0) {
+        inputEl.classList.remove('invalid');
+        inputEl.classList.remove('valid');
+    } if (inputValue !== 6 && inputValue !== 0) {
         inputEl.classList.add('invalid');
         inputEl.classList.remove('valid');
     }

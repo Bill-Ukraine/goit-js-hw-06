@@ -14,9 +14,7 @@ const images = [
 ];
 const galleryEl = document.querySelector(".gallery");
 console.log(galleryEl);
-const imgEl = images.map((item) => `<img src = ${item.url}, alt = ${item.alt}></img>`).join('');
+const imgEl = images.map((item) => `<img class='gallary-img' src = ${item.url} alt = ${item.alt}>`).join('');
   console.log(imgEl);
 galleryEl.insertAdjacentHTML('afterbegin',imgEl);
-
-galleryEl.style.display = "flex";
-galleryEl.style.height = "200px";
+galleryEl.style.cssText = 'display: flex; height: 200px';
